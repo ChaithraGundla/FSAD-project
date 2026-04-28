@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Advisor Dashboard | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="index.html"><span class="brand-mark">S</span><div><strong>SafeHaven</strong><small>Legal Panel</small></div></a>
+      <nav class="sidebar-nav">
+        <a class="active" href="legal-dashboard.html">Overview</a>
+        <a href="#queries">Legal Queries</a>
+        <a href="#responses">Respond to Users</a>
+        <a href="#resources">Rights Resources</a>
+        <a href="#case-support">Case Support</a>
+        <a href="index.html">Back to Site</a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div>
+          <h1>Legal Advisor Dashboard</h1>
+          <p>Review legal questions, maintain rights resources, and support case follow-up.</p>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+          <button class="primary-btn" type="button" data-toast="Legal rights resource updated.">Update Resources</button>
+        </div>
+      </header>
+
+      <div class="dashboard-grid">
+        <article class="metric-card"><strong>09</strong><span>Open legal queries</span></article>
+        <article class="metric-card"><strong>03</strong><span>Urgent reviews</span></article>
+        <article class="metric-card"><strong>14</strong><span>Published rights resources</span></article>
+        <article class="metric-card"><strong>06</strong><span>Active case supports</span></article>
+      </div>
+
+      <section class="panel" id="queries">
+        <div class="panel-header"><h2>View Legal Queries</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Query ID</th><th>Topic</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>LQ-201</td><td>Protection order information</td><td>Pending</td></tr>
+              <tr><td>LQ-202</td><td>Filing process support</td><td>In Review</td></tr>
+              <tr><td>LQ-203</td><td>Custody-related guidance</td><td>Assigned</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="responses">
+        <div class="panel-header"><h2>Respond to Users</h2></div>
+        <form class="validate-form">
+          <label><span>Response note</span><textarea rows="5" required placeholder="Write clear and supportive legal guidance"></textarea></label>
+          <button class="secondary-btn" type="submit">Send Response</button>
+        </form>
+      </section>
+
+      <section class="panel" id="resources">
+        <div class="panel-header"><h2>Update Legal Rights Resources</h2></div>
+        <div class="card-grid two-up">
+          <article class="mini-card"><h3>Rights Library</h3><p>Protection, reporting pathways, documentation, and court process guidance.</p></article>
+          <article class="mini-card"><h3>Download Center</h3><p>Forms, templates, and multilingual support materials.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="case-support">
+        <div class="panel-header"><h2>Case Support Panel</h2></div>
+        <div class="mini-card">
+          <p>Coordinate with counsellors and admins on urgent cases, timelines, and rights-based next steps while preserving privacy and clear documentation.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

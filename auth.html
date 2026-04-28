@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <div><strong>SafeHaven</strong><small>Trusted support platform</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
+      <nav class="nav-links" data-nav-menu>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-cta active">Login / Register</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" type="button" data-language-toggle>EN / HI</button>
+        <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main auth-shell">
+    <section class="auth-layout container">
+      <div class="auth-copy">
+        <span class="eyebrow">Secure entry</span>
+        <h1>Access the right support space for your role</h1>
+        <p class="lead">This basic demo uses role-based navigation to direct each user type to the right dashboard experience.</p>
+      </div>
+
+      <div class="card-grid two-up">
+        <form class="form-card validate-form" data-role-form>
+          <div class="form-header">
+            <h2>Login</h2>
+            <p>Sign in to continue.</p>
+          </div>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="name@example.com">
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" required minlength="6" placeholder="Enter password">
+          </label>
+          <label>
+            <span>Role</span>
+            <select name="role" required>
+              <option value="">Select role</option>
+              <option value="admin">Admin</option>
+              <option value="survivor">Victim / Survivor</option>
+              <option value="counsellor">Counsellor</option>
+              <option value="legal">Legal Advisor</option>
+            </select>
+          </label>
+          <button class="primary-btn" type="submit">Login</button>
+        </form>
+
+        <form class="form-card validate-form">
+          <div class="form-header">
+            <h2>Register</h2>
+            <p>Create a new account.</p>
+          </div>
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" required placeholder="Enter full name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="name@example.com">
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" required minlength="6" placeholder="Create password">
+          </label>
+          <label>
+            <span>Preferred Role</span>
+            <select name="role" required>
+              <option value="">Select role</option>
+              <option value="admin">Admin</option>
+              <option value="survivor">Victim / Survivor</option>
+              <option value="counsellor">Counsellor</option>
+              <option value="legal">Legal Advisor</option>
+            </select>
+          </label>
+          <button class="secondary-btn" type="submit">Register</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

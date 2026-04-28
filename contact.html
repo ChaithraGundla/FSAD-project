@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <div><strong>SafeHaven</strong><small>Trusted support platform</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
+      <nav class="nav-links" data-nav-menu>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="auth.html" class="nav-cta">Login / Register</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" type="button" data-language-toggle>EN / HI</button>
+        <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <span class="eyebrow">Contact</span>
+        <h1>Reach out to the SafeHaven team</h1>
+        <p class="lead">Use the form for general contact, support coordination, or partnership enquiries.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card-grid two-up">
+        <form class="form-card validate-form" data-api-form data-endpoint="/api/contact-requests">
+          <div class="form-header">
+            <h2>Contact Form</h2>
+            <p>We respond as quickly as possible.</p>
+          </div>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="name@example.com">
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required placeholder="Write your message"></textarea>
+          </label>
+          <button class="primary-btn" type="submit">Send Message</button>
+        </form>
+
+        <div class="feature-panel">
+          <h2>Contact Details</h2>
+          <div class="contact-list">
+            <div><strong>Email</strong><span>support@safehaven.org</span></div>
+            <div><strong>Helpline</strong><span>181</span></div>
+            <div><strong>Emergency</strong><span>112</span></div>
+            <div><strong>Social</strong><span>Facebook | X | LinkedIn</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>SafeHaven</h3><p>A digital support portal designed for safety, dignity, and equal access to help.</p></div>
+      <div><h4>Emergency Contacts</h4><ul class="footer-list"><li>Women's Helpline: 181</li><li>Police Emergency: 112</li><li>Email: support@safehaven.org</li></ul></div>
+      <div><h4>Quick Links</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="auth.html">Login</a></li></ul></div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
