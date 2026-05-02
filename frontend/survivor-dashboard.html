@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survivor Dashboard | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="index.html"><span class="brand-mark">S</span><div><strong>SafeHaven</strong><small>Survivor Support</small></div></a>
+      <nav class="sidebar-nav">
+        <a class="active" href="survivor-dashboard.html">Overview</a>
+        <a href="#request-help">Request Help</a>
+        <a href="#anonymous-report">Anonymous Report</a>
+        <a href="#appointments">Book Counselling</a>
+        <a href="#rights">Legal Rights</a>
+        <a href="#case-progress">Case Progress</a>
+        <a href="emergency.html">Emergency SOS</a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div>
+          <h1>Victim / Survivor Dashboard</h1>
+          <p>Private tools to request help, track support, and access trusted information.</p>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+          <button class="primary-btn danger" type="button" onclick="location.href='emergency.html'">Emergency SOS</button>
+        </div>
+      </header>
+
+      <div class="dashboard-grid">
+        <article class="metric-card"><strong>01</strong><span>Active support request</span></article>
+        <article class="metric-card"><strong>02</strong><span>Scheduled sessions</span></article>
+        <article class="metric-card"><strong>04</strong><span>Saved legal resources</span></article>
+        <article class="metric-card"><strong>Private</strong><span>Reporting mode enabled</span></article>
+      </div>
+
+      <section class="panel" id="request-help">
+        <div class="panel-header">
+          <h2>Request Help</h2>
+        </div>
+        <form class="form-grid validate-form" data-api-form data-endpoint="/api/support-requests">
+          <label><span>Type of help</span><select name="requestType" required><option value="">Choose</option><option>Counselling</option><option>Legal</option><option>Emergency</option><option>Shelter</option></select></label>
+          <label><span>Preferred contact method</span><select name="contactMethod" required><option value="">Choose</option><option>Phone</option><option>Email</option><option>Secure chat</option></select></label>
+          <label class="full-width"><span>Short message</span><textarea name="message" rows="4" required placeholder="Describe what support you need"></textarea></label>
+          <button class="primary-btn" type="submit">Submit Request</button>
+        </form>
+      </section>
+
+      <section class="panel" id="anonymous-report">
+        <div class="panel-header">
+          <h2>Anonymous Report Form</h2>
+        </div>
+        <form class="form-grid validate-form" data-api-form data-endpoint="/api/anonymous-reports">
+          <label><span>Incident type</span><input type="text" name="incidentType" required placeholder="Physical, emotional, financial"></label>
+          <label><span>Date</span><input type="date" name="incidentDate" required></label>
+          <label class="full-width"><span>Incident details</span><textarea name="details" rows="5" required placeholder="Share only what feels safe to share"></textarea></label>
+          <button class="secondary-btn" type="submit">Submit Anonymously</button>
+        </form>
+      </section>
+
+      <section class="panel" id="appointments">
+        <div class="panel-header">
+          <h2>Book Counselling</h2>
+        </div>
+        <div class="card-grid two-up">
+          <article class="mini-card"><h3>Next available session</h3><p>Wednesday, 11:00 AM</p><button class="table-btn" data-toast="Counselling appointment booked.">Book Now</button></article>
+          <article class="mini-card"><h3>Preferred mode</h3><p>Video, voice, or text-based support options.</p><button class="table-btn" data-toast="Session preferences updated.">Update Preference</button></article>
+        </div>
+      </section>
+
+      <section class="panel" id="rights">
+        <div class="panel-header">
+          <h2>View Legal Rights</h2>
+        </div>
+        <div class="mini-card">
+          <p>Understand protection orders, reporting options, access to support services, and how to document incidents. This demo page connects to the legal dashboard for expanded resource management.</p>
+          <a class="text-link" href="legal-dashboard.html">Open legal resources</a>
+        </div>
+      </section>
+
+      <section class="panel" id="case-progress">
+        <div class="panel-header">
+          <h2>Track Case Progress</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Case Step</th><th>Status</th><th>Updated</th></tr></thead>
+            <tbody>
+              <tr><td>Initial request received</td><td>Completed</td><td>Today</td></tr>
+              <tr><td>Counsellor assigned</td><td>Completed</td><td>Today</td></tr>
+              <tr><td>Legal follow-up</td><td>Pending</td><td>Tomorrow</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

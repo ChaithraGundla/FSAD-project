@@ -1,0 +1,23 @@
+{
+  "name": "safehaven-backend",
+  "version": "1.0.0",
+  "description": "SafeHaven separated backend for Render deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "safehaven",
+    "mysql",
+    "express",
+    "render"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  }
+}

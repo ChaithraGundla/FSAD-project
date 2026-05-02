@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counsellor Dashboard | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="index.html"><span class="brand-mark">S</span><div><strong>SafeHaven</strong><small>Counsellor Panel</small></div></a>
+      <nav class="sidebar-nav">
+        <a class="active" href="counsellor-dashboard.html">Overview</a>
+        <a href="#assigned">Assigned Survivors</a>
+        <a href="#messages">Chat Support</a>
+        <a href="#notes">Add Notes</a>
+        <a href="#progress">Update Progress</a>
+        <a href="#schedule">Appointments</a>
+        <a href="index.html">Back to Site</a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div>
+          <h1>Counsellor Dashboard</h1>
+          <p>Organize survivor care, notes, and appointments in one place.</p>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+          <button class="primary-btn" type="button" data-open-modal="messageModal">New Message</button>
+        </div>
+      </header>
+
+      <div class="dashboard-grid">
+        <article class="metric-card"><strong>12</strong><span>Assigned survivors</span></article>
+        <article class="metric-card"><strong>05</strong><span>Unread messages</span></article>
+        <article class="metric-card"><strong>03</strong><span>Sessions today</span></article>
+        <article class="metric-card"><strong>08</strong><span>Notes pending review</span></article>
+      </div>
+
+      <section class="panel" id="assigned">
+        <div class="panel-header"><h2>View Assigned Survivors</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>Support Plan</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Case A</td><td>Weekly counselling</td><td>Active</td></tr>
+              <tr><td>Case B</td><td>Crisis follow-up</td><td>High Priority</td></tr>
+              <tr><td>Case C</td><td>Referral support</td><td>Stable</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="messages">
+        <div class="panel-header"><h2>Chat / Message Support</h2></div>
+        <div class="chat-placeholder">
+          <div class="chat-bubble incoming">Hello, I would like to reschedule my session.</div>
+          <div class="chat-bubble outgoing">Of course. I can help with that.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="notes">
+        <div class="panel-header"><h2>Add Notes</h2></div>
+        <form class="validate-form">
+          <label><span>Session notes</span><textarea rows="5" required placeholder="Write professional case notes"></textarea></label>
+          <button class="secondary-btn" type="submit">Save Notes</button>
+        </form>
+      </section>
+
+      <section class="panel" id="progress">
+        <div class="panel-header"><h2>Update Progress</h2></div>
+        <div class="card-grid two-up">
+          <article class="mini-card"><h3>Care plan status</h3><p>Update milestones and referrals.</p></article>
+          <article class="mini-card"><h3>Risk review</h3><p>Flag safety concerns for coordinated response.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="schedule">
+        <div class="panel-header"><h2>Schedule Appointments</h2></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Time</th><th>Client</th><th>Mode</th></tr></thead>
+            <tbody>
+              <tr><td>10:00 AM</td><td>Case A</td><td>Video</td></tr>
+              <tr><td>1:00 PM</td><td>Case B</td><td>Voice</td></tr>
+              <tr><td>4:00 PM</td><td>Case C</td><td>Text</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="modal" id="messageModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="messageModalTitle">
+      <div class="modal-header">
+        <h3 id="messageModalTitle">Send Support Message</h3>
+        <button type="button" class="icon-btn" data-close-modal>&times;</button>
+      </div>
+      <form class="validate-form">
+        <label><span>Recipient</span><input type="text" required placeholder="Case or survivor name"></label>
+        <label><span>Message</span><textarea rows="4" required placeholder="Write your message"></textarea></label>
+        <button class="primary-btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

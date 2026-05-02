@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <a class="brand sidebar-brand" href="index.html"><span class="brand-mark">S</span><div><strong>SafeHaven</strong><small>Admin Panel</small></div></a>
+      <nav class="sidebar-nav">
+        <a class="active" href="admin-dashboard.html">Overview</a>
+        <a href="#users">Manage Users</a>
+        <a href="#resources">Manage Resources</a>
+        <a href="#requests">View Requests</a>
+        <a href="#security">Security Settings</a>
+        <a href="index.html">Back to Site</a>
+      </nav>
+    </aside>
+
+    <section class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p>Monitor users, resources, and security controls.</p>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+          <button class="primary-btn" type="button" data-open-modal="adminModal">Add Resource</button>
+        </div>
+      </header>
+
+      <div class="dashboard-grid">
+        <article class="metric-card"><strong>124</strong><span>Registered users</span></article>
+        <article class="metric-card"><strong>18</strong><span>Open requests</span></article>
+        <article class="metric-card"><strong>08</strong><span>New resources</span></article>
+        <article class="metric-card"><strong>99.9%</strong><span>Platform uptime</span></article>
+      </div>
+
+      <section class="panel" id="users">
+        <div class="panel-header">
+          <h2>Manage Users</h2>
+          <button class="secondary-btn small" type="button" data-toast="User actions synced successfully.">Sync</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>User</th><th>Role</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>Anita Rao</td><td>Survivor</td><td>Active</td><td><button class="table-btn">View</button></td></tr>
+              <tr><td>Rahul Sen</td><td>Counsellor</td><td>Active</td><td><button class="table-btn">View</button></td></tr>
+              <tr><td>Naina Das</td><td>Legal Advisor</td><td>Pending</td><td><button class="table-btn">Approve</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="resources">
+        <div class="panel-header">
+          <h2>Manage Resources</h2>
+        </div>
+        <div class="card-grid two-up">
+          <article class="mini-card"><h3>Knowledge Base</h3><p>Update legal rights, helplines, and support articles.</p></article>
+          <article class="mini-card"><h3>Emergency Directory</h3><p>Maintain hotline numbers, referral contacts, and shelter placeholders.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="requests">
+        <div class="panel-header">
+          <h2>View Requests</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Request ID</th><th>Type</th><th>Priority</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>#SH-1031</td><td>Emergency</td><td>High</td><td>In Progress</td></tr>
+              <tr><td>#SH-1026</td><td>Legal</td><td>Medium</td><td>Assigned</td></tr>
+              <tr><td>#SH-1018</td><td>Counselling</td><td>High</td><td>Booked</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="stored-requests">
+        <div class="panel-header">
+          <h2>Stored Website Requests</h2>
+          <button class="secondary-btn small" type="button" data-load-requests>Refresh</button>
+        </div>
+        <div class="admin-request-grid">
+          <div class="mini-card">
+            <h3>Contact Messages</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Name</th><th>Email</th><th>Message</th><th>Time</th></tr></thead>
+                <tbody data-contact-rows>
+                  <tr><td colspan="4">No data loaded yet.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="mini-card">
+            <h3>Support Requests</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Type</th><th>Contact</th><th>Message</th><th>Time</th></tr></thead>
+                <tbody data-support-rows>
+                  <tr><td colspan="4">No data loaded yet.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="mini-card">
+            <h3>Anonymous Reports</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Incident</th><th>Date</th><th>Details</th><th>Saved</th></tr></thead>
+                <tbody data-anonymous-rows>
+                  <tr><td colspan="4">No data loaded yet.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="security">
+        <div class="panel-header">
+          <h2>Security Settings</h2>
+        </div>
+        <div class="settings-list">
+          <label class="toggle-row"><span>Two-factor authentication</span><input type="checkbox" checked></label>
+          <label class="toggle-row"><span>Anonymous report encryption</span><input type="checkbox" checked></label>
+          <label class="toggle-row"><span>Admin login alerts</span><input type="checkbox"></label>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="modal" id="adminModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+      <div class="modal-header">
+        <h3 id="adminModalTitle">Add Resource</h3>
+        <button type="button" class="icon-btn" data-close-modal>&times;</button>
+      </div>
+      <form class="validate-form">
+        <label><span>Resource title</span><input type="text" required placeholder="Enter title"></label>
+        <label><span>Category</span><input type="text" required placeholder="Legal, health, shelter"></label>
+        <button class="primary-btn" type="submit">Save Resource</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

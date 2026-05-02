@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | SafeHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <div><strong>SafeHaven</strong><small>Trusted support platform</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle><span></span><span></span><span></span></button>
+      <nav class="nav-links" data-nav-menu>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-cta">Login / Register</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" type="button" data-language-toggle>EN / HI</button>
+        <button class="ghost-btn" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <span class="eyebrow">Services</span>
+        <h1>Practical support designed around safety</h1>
+        <p class="lead">Each service area is organized to help users quickly identify the kind of support they need and take a next step with confidence.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="search-strip">
+          <label class="search-field">
+            <span class="sr-only">Search resources</span>
+            <input type="search" placeholder="Search services and resources" data-resource-search>
+          </label>
+        </div>
+
+        <div class="card-grid three-up" data-search-list>
+          <article class="service-card" data-search-item="counselling support trauma guidance sessions emotional support">
+            <h3>Counselling Support</h3>
+            <p>Confidential sessions, emotional care planning, trauma-informed listening, and referrals.</p>
+            <button class="secondary-btn small" type="button" data-toast="Counselling support details are ready to explore.">Learn More</button>
+          </article>
+          <article class="service-card" data-search-item="legal guidance rights legal advisor documentation case help">
+            <h3>Legal Guidance</h3>
+            <p>Simple explanations of rights, legal options, documentation support, and advisor access.</p>
+            <button class="secondary-btn small" type="button" data-toast="Legal guidance resources opened.">Learn More</button>
+          </article>
+          <article class="service-card" data-search-item="emergency help sos hotline urgent safety">
+            <h3>Emergency Help</h3>
+            <p>Fast access to urgent actions, SOS support, hotline details, and immediate next steps.</p>
+            <button class="secondary-btn small" type="button" onclick="location.href='emergency.html'">Open</button>
+          </article>
+          <article class="service-card" data-search-item="safe reporting anonymous reporting private report">
+            <h3>Safe Reporting</h3>
+            <p>Private reporting forms that allow users to document concerns and request follow-up support.</p>
+            <button class="secondary-btn small" type="button" data-toast="Safe reporting flow is available from the survivor dashboard.">Learn More</button>
+          </article>
+          <article class="service-card" data-search-item="mental health resources wellness stress recovery">
+            <h3>Mental Health Resources</h3>
+            <p>Wellbeing guidance, stress regulation resources, coping tools, and trusted educational materials.</p>
+            <button class="secondary-btn small" type="button" data-toast="Mental health resources can be added or updated anytime.">Learn More</button>
+          </article>
+          <article class="service-card" data-search-item="shelter support services housing safe spaces referrals">
+            <h3>Shelter / Support Services</h3>
+            <p>Placeholder shelter information, referral pathways, and coordinated access to safe spaces.</p>
+            <button class="secondary-btn small" type="button" data-toast="Shelter support listings can be connected to local data later.">Learn More</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>SafeHaven</h3><p>A digital support portal designed for safety, dignity, and equal access to help.</p></div>
+      <div><h4>Emergency Contacts</h4><ul class="footer-list"><li>Women's Helpline: 181</li><li>Police Emergency: 112</li><li>Email: support@safehaven.org</li></ul></div>
+      <div><h4>Quick Links</h4><ul class="footer-list"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="auth.html">Login</a></li></ul></div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
